@@ -1,24 +1,14 @@
 const helpers = (() => {
-  let location = [];
-  const showPosition = (position) => {
-    location = [
-      position.coords.latitude,
-      position.coords.longitude,
-    ];
-    console.log(location);
-    return location;
-  };
-
-  const getLocation = () => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition);
+  const nightDay = (icon) => {
+    const res = icon.split('')[2];
+    let retval = '';
+    if (res === 'n') {
+      retval = "url('../../src/images/moon.gif')";
     } else {
-      location = [15.045077599999999, 52.0534423];
+      retval = "url('../../src/images/sun.gif')";
     }
-    console.log(location);
-    return location;
+    return retval;
   };
-
-  return { getLocation };
+  return { nightDay };
 })();
 export default helpers;
