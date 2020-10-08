@@ -1,6 +1,6 @@
 # Weather App
 
-This Weather App project is created to test my knowledge about asynchronous communication with promises or async/await and when to use them.
+This Weather App project is created to test knowledge about asynchronous communication with promises or async/await and when to use them.
 
 ![screenshot](./src/images/app_screenshot.png)
 
