@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 /* eslint-disable no-unused-expressions */
 import output from './domManipulation';
 import promises from './promise';
@@ -16,6 +17,10 @@ const userInterface = (() => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition);
     }
+    promises.info()
+      .then(data => {
+        output.dataprocess(data);
+      });
   };
 
   const navBar = () => {
@@ -26,6 +31,9 @@ const userInterface = (() => {
       promises.info(`http://api.openweathermap.org/data/2.5/weather?q=${newCity.value}&units=metric&appid=6f8406a0f73a73164c3328cffe2fc4db`)
         .then(data => {
           output.dataprocess(data);
+        })
+        .catch(() => {
+          alert('unable to find your location');
         });
       newCity.value = '';
     });

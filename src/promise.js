@@ -1,14 +1,18 @@
 
 const promises = (() => {
-  async function info(url = 'http://api.openweathermap.org/data/2.5/weather?q=London,uk&units=metric&appid=6f8406a0f73a73164c3328cffe2fc4db', data = {}) {
-    const response = await fetch(url, {
-      method: 'POST',
-      mode: 'cors',
-      body: JSON.stringify(data),
+  const defaultUrl = 'http://api.openweathermap.org/data/2.5/weather?q=London,uk&units=metric&appid=6f8406a0f73a73164c3328cffe2fc4db';
+  const info = (url = defaultUrl) => new Promise((resolve, reject) => {
+    fetch(url,
+      {
+        mode: 'cors',
+      }).then(res => res.json()).then((res) => {
+      if (res.cod === 200) {
+        resolve(res);
+      } else {
+        reject();
+      }
     });
-    // console.log(response.json());
-    return response.json();
-  }
+  });
   return { info };
 })();
 export default promises;

@@ -1,6 +1,6 @@
-# to_do_list
+# Weather App
 
-This is a To Do List App using JavaScript and Webpack. With as goal learning how to apply Object Oriented Programming best practices.
+This Weather App project is created to test my knowledge about asynchronous communication with promises or async/await and when to use them.
 
 ![screenshot](./src/images/app_screenshot.png)
 
@@ -13,27 +13,25 @@ This is a To Do List App using JavaScript and Webpack. With as goal learning how
 
 ## Live Demo
 
-[Live Demo Link](https://raw.githack.com/mikethreels/to_do_list/feature-branch/dist/index.html)
+[Live Demo Link](https://raw.githack.com/mikethreels/weather_app/feature-branch/dist/index.html)
 
 
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
 
-- Git clone https://github.com/mikethreels/to_do_list
+- Git clone https://github.com/mikethreels/weather_app
 - Open the index.html inside the dist folder with your favorite browser
 - Explore the website
 
 ### Usage
 
-- Navigate through all projects in the navigation pane on the left-hand side
-- In the middle the currently selected project will be visible
-- A project can be deleted by clicking on the red 'X' in the top right corner of the project
-- Click on the todo's inside the project to expand or collapse the field below
-- A todo can be deleted by clicking on 'Delete toDo' when the todo is expanded
-- Create new projects by filling in the form in the 'Create a Project' window and click the button
-- Create new todo's by filling in the form in the 'Add or change your ToDoo' window and click the button (the todo will be added to the currently selected project)
-- Both a project and a todo can be adjusted by using the forms on the right-hand side entering the exsisting title.
+- When opening the browser the user will be prompted to allow location visibility
+- If the location is denied the app will select a default city
+- If the location is allowed the weather for the users current location will be viewed
+- The User can search for other cities as well
+- If the city exsists it will be displayed in the window
+- if the city does not exsist the current city will be shown and the user will be prompted.
 
 ## Author
 👤 Michael Threels
