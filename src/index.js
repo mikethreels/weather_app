@@ -1,5 +1,5 @@
 import userInterface from './landing';
-// import promises from './promise';
+// import output from './domManipulation';
 
 userInterface.getLocation();
-// promises.info();
+userInterface.navBar();

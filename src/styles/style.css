@@ -6,6 +6,28 @@ body {
   background-size: cover;
 }
 
+header,
+nav,
+form {
+  height: 8vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-size: 20px;
+}
+
+input,
+button {
+  margin: 5px;
+  border-radius: 5px;
+}
+
 main {
   height: 100vh;
 }

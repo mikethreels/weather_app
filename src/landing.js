@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 import output from './domManipulation';
 import promises from './promise';
 
@@ -17,11 +18,23 @@ const userInterface = (() => {
     }
   };
 
-  // const main = () => {
-  //   const location = getLocation();
-  // };
+  const navBar = () => {
+    const button = document.getElementById('search_button');
+    button.setAttribute('type', 'button');
+    button.addEventListener('click', () => {
+      const newCity = document.getElementById('newCity');
+      console.log(newCity.value);
+      promises.info(`http://api.openweathermap.org/data/2.5/weather?q=${newCity.value}&units=metric&appid=6f8406a0f73a73164c3328cffe2fc4db`)
+        .then(data => {
+          output.dataprocess(data);
+        });
+      newCity.value = '';
+    });
+  };
+
   return {
     getLocation,
+    navBar,
   };
 })();
 export default userInterface;
