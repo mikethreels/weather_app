@@ -23,7 +23,6 @@ const userInterface = (() => {
     button.setAttribute('type', 'button');
     button.addEventListener('click', () => {
       const newCity = document.getElementById('newCity');
-      console.log(newCity.value);
       promises.info(`http://api.openweathermap.org/data/2.5/weather?q=${newCity.value}&units=metric&appid=6f8406a0f73a73164c3328cffe2fc4db`)
         .then(data => {
           output.dataprocess(data);

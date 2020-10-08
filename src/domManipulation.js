@@ -2,7 +2,6 @@ import helpers from './helpers';
 
 const output = (() => {
   const dataprocess = (info) => {
-    console.log(info);
     const contentdiv = document.getElementById('content');
     while (contentdiv.firstChild) {
       contentdiv.removeChild(contentdiv.firstChild);
