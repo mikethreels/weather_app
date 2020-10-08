@@ -1,6 +1,6 @@
 
 const promises = (() => {
-  const defaultUrl = 'http://api.openweathermap.org/data/2.5/weather?q=London,uk&units=metric&appid=6f8406a0f73a73164c3328cffe2fc4db';
+  const defaultUrl = 'https://api.openweathermap.org/data/2.5/weather?q=London,uk&units=metric&appid=6f8406a0f73a73164c3328cffe2fc4db';
   const info = (url = defaultUrl) => new Promise((resolve, reject) => {
     fetch(url,
       {
