@@ -1,5 +1,3 @@
-// import helpers from './helpers';
-
 const output = (() => {
   const dataprocess = (info) => {
     const contentdiv = document.getElementById('content');
@@ -14,7 +12,6 @@ const output = (() => {
     const weatherDescription = document.createElement('p');
     const iconCode = info.weather[0].icon;
     city.setAttribute('id', 'city_name');
-    // document.body.style.backgroundImage = helpers.nightDay(info.weather[0].icon);
     weatherDescription.innerHTML = info.weather[0].description;
     city.innerHTML = info.name;
     min.innerHTML = `Minimum Temperature ${Math.round(info.main.temp_min)} °C`;
