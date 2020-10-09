@@ -1,7 +1,7 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
-  background-image: linear-gradient(to right bottom, #f8051a, #ff446d, #ff78af, #ffa8df, #f5d1fa, #ebcefc, #e0cbfe, #d3c8ff, #b39fff, #9175ff, #6949ff, #2c00ff);
+  background-image: url('../../src/images/moon.gif');
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
@@ -52,8 +52,6 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin: 0 30vw;
-  background-color: rgba(150, 150, 150, 0.3);
 }
 
 .content img {
