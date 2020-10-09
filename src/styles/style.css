@@ -9,10 +9,16 @@ body {
 header,
 nav,
 form {
-  height: 8vh;
+  height: 10vh;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 form {
+  grid-column: 2 / 3;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,6 +32,13 @@ input,
 button {
   margin: 5px;
   border-radius: 5px;
+}
+
+.unit_button {
+  width: 40%;
+  height: 30px;
+  justify-self: end;
+  margin: 15px;
 }
 
 main {

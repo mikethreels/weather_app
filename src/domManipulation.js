@@ -13,6 +13,7 @@ const output = (() => {
     const max = document.createElement('p');
     const weatherDescription = document.createElement('p');
     const iconCode = info.weather[0].icon;
+    city.setAttribute('id', 'city_name');
     document.body.style.backgroundImage = helpers.nightDay(info.weather[0].icon);
     weatherDescription.innerHTML = info.weather[0].description;
     city.innerHTML = info.name;
